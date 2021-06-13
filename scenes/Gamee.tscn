@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/Road.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/CarSpawner.tscn" type="PackedScene" id=4]
+
+[node name="Game" type="Node2D"]
+
+[node name="Road" parent="." instance=ExtResource( 3 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 38.5181, 47.3681 )
+
+[node name="CarSpawner" parent="." instance=ExtResource( 4 )]
+position = Vector2( 116.708, 23.1634 )

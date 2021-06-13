@@ -1,0 +1,19 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/CarSpawner.gd" type="Script" id=1]
+[ext_resource path="res://scenes/cars/Vintage.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/cars/Station.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/cars/RoundedRed.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/cars/Convertible.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/cars/RoundedYellow.tscn" type="PackedScene" id=6]
+
+[node name="CarSpawner" type="Node2D"]
+script = ExtResource( 1 )
+path_to_obstacle = "res://scenes/cars/"
+obstacles = [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 2 ) ]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

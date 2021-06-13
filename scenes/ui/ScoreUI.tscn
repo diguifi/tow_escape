@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/Dynamic_Label_Font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://src/ScoreUI.gd" type="Script" id=2]
+
+[node name="Score" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1.0
+margin_top = 2.0
+margin_right = 32.0
+margin_bottom = 9.0
+custom_fonts/font = ExtResource( 1 )
+text = "Score"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Points" type="RichTextLabel" parent="."]
+margin_left = 30.4966
+margin_top = 2.83427
+margin_right = 59.4966
+margin_bottom = 13.8343
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 85.0
+margin_top = 2.0
+margin_right = 106.0
+margin_bottom = 9.0
+custom_fonts/font = ExtResource( 1 )
+text = "Max"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MaxPoints" type="RichTextLabel" parent="."]
+margin_left = 104.247
+margin_top = 2.83427
+margin_right = 133.247
+margin_bottom = 13.8343
+rect_clip_content = false
+custom_fonts/normal_font = ExtResource( 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
