@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 onready var player = get_node("/root/Game/Player")
-var velocity = Vector2(-30,0)
+export var velocity = Vector2(-30,0)
 
 func _physics_process(delta):
 	set_render_z()

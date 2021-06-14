@@ -4,6 +4,7 @@ onready var level_timer = $Timer
 onready var game = get_node("/root/Game")
 var scenes = []
 export var path_to_obstacle = ""
+export var chance_to_spawn = 0.8
 export (Array, PackedScene) var obstacles
 var random_scene = RandomNumberGenerator.new()
 var selected_scene_index = 0
@@ -20,7 +21,7 @@ func load_level_scenes():
 
 func _spawn_car():
 	var percent = randf()
-	if (!scenes.empty() && (percent < 0.8)):
+	if (!scenes.empty() && (percent < chance_to_spawn)):
 		random_scene.randomize()
 		selected_scene_index = random_scene.randi_range(0, scenes.size()-1)
 		avoid_duplicate_chuncks()
